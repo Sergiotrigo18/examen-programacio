@@ -1,33 +1,19 @@
+import random
 import csv
-import random 
 
-trabajadores = ["andres trigo", "cecilia caro", "camila lopez", "natanael rebeco", 
-                "javier rodriguez", "Laura Hernández", "cristiano ronaldo", 
-                "Isabel caro", "Francisco sepulveda", "leonel andres"]
 
 def generar_sueldos_aleatorios():
-    sueldos = []
-    for _ in range(10):
-        sueldo = random.randint(300000, 2500000)
-        sueldos.append(sueldo)
+    random.randint(300000, 2500000)
     return sueldos
 
 sueldos = generar_sueldos_aleatorios()
 print(sueldos)
 
-def mostrar_menu():
-    print("Menú Principal:")
-    print("1. asignar sueldos aleatorios")
-    print("2. Clasificar sueldos")
-    print("3. Ver estadísticas de sueldos")
-    print("4. Reporte de sueldos")
-    print("5. Salir del programa")
-
 def asignar_sueldos_aleatorios():
     sueldos = generar_sueldos_aleatorios()
     print("\nSueldos asignados aleatoriamente:")
     for i, trabajador in enumerate(trabajadores):
-        print(f"{trabajador}: ${sueldos[i]}")
+        print(f"{trabajador}: {sueldos[i]}")
 
 def clasificar_sueldos():
     menores_800000 = []
@@ -56,4 +42,8 @@ def clasificar_sueldos():
     print("\nSueldos superiores a $2.000.000")
     print(f"TOTAL: {len(superiores_2000000)}")
     for trabajador, sueldo in superiores_2000000:
-        print(f"Nombre empleado: {trabajador}, Sueldo: ${sueldo}")
+        print(f"Nombre empleado: {trabajador}, Sueldo: {sueldo}")
+
+trabajadores = ["andres trigo", "cecilia caro", "camila lopez", "natanael rebeco", 
+                "javier rodriguez", "Laura Hernández", "cristiano ronaldo", 
+                "Isabel caro", "Francisco sepulveda", "leonel andres"]
